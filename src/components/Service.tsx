@@ -40,34 +40,40 @@ export default function Services() {
     <section id="services" className="py-32 bg-[#2F2F2F] overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         
-        {/* SECTION HEADER - ALIGNED WITH PROCESS SECTION STYLE */}
-        <div className="max-w-4xl mb-24">
-          <div className="inline-block bg-[#10B981]/10 border border-[#10B981]/20 px-6 py-2 rounded-full mb-8">
-            <p style={{ fontSize: '15px' }} className="text-[#10B981] font-bold tracking-wide uppercase">
-              What we offer
+        {/* RESTRUCTURED HEADER: SPLIT LEFT & RIGHT */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-14">
+          
+          {/* LEFT SIDE: BADGE & TITLE */}
+          <div className="md:w-1/2">
+            <div className="inline-block bg-[#10B981]/10 border border-[#10B981]/20 px-6 py-2 rounded-full mb-6">
+              <p style={{ fontSize: '15px' }} className="text-[#10B981] font-bold tracking-wide uppercase">
+                What we offer
+              </p>
+            </div>
+            <h2 style={{ fontSize: '52px' }} className="font-black text-[#F0F8FF] tracking-tighter uppercase leading-[1.1]">
+              Expert Services<span className="text-[#10B981]">.</span>
+            </h2>
+          </div>
+
+          {/* RIGHT SIDE: DESCRIPTION PARAGRAPH */}
+          <div className="md:w-1/2">
+            <p style={{ fontSize: '20px' }} className="text-slate-400 leading-relaxed max-w-xl">
+              We combine technical excellence with premium design to help your business stand out in a crowded digital landscape.
             </p>
           </div>
-          <h2 style={{ fontSize: '52px' }} className="font-black text-[#F0F8FF] tracking-tighter uppercase mb-6">
-            Expert Services<span className="text-[#10B981]">.</span>
-          </h2>
-          <p style={{ fontSize: '20px' }} className="text-slate-300 leading-relaxed max-w-2xl">
-            We combine technical excellence with premium design to help your business stand out in a crowded digital landscape.
-          </p>
         </div>
 
-        {/* SERVICES GRID - GLASSMORPISM STYLE */}
+        {/* SERVICES GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
               key={index}
               className="group relative p-10 rounded-[40px] bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-[#10B981]/40 transition-all duration-500 shadow-2xl hover:-translate-y-2"
             >
-              {/* ICON CONTAINER */}
               <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-[#10B981] mb-8 group-hover:bg-[#10B981] group-hover:text-[#2F2F2F] transition-all duration-300">
                 {service.icon}
               </div>
 
-              {/* CONTENT */}
               <h3 style={{ fontSize: '24px' }} className="font-bold text-[#F0F8FF] mb-4 tracking-tight">
                 {service.title}
               </h3>
@@ -75,13 +81,11 @@ export default function Services() {
                 {service.desc}
               </p>
 
-              {/* ACTION LINK */}
               <div className="flex items-center gap-3 text-[#10B981] font-bold uppercase text-xs tracking-[0.2em] group/link cursor-pointer">
                 <span className="group-hover:mr-2 transition-all duration-300">Read More</span>
                 <ArrowUpRight size={18} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
               </div>
               
-              {/* SUBTLE CARD GLOW ON HOVER */}
               <div className="absolute inset-0 rounded-[40px] bg-[#10B981]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </div>
           ))}
