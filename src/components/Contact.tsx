@@ -37,7 +37,7 @@ export default function Contact() {
             
             <div className="relative z-10">
               <h2 style={{ fontSize: '48px' }} className="font-black text-[#2F2F2F] leading-[0.9] uppercase tracking-tighter mb-6">
-                Get in touch<span className="text-white">.</span>
+                Get in touch<span className="text-white">&apos;</span>
               </h2>
               <p style={{ fontSize: '18px' }} className="text-[#2F2F2F]/80 font-medium ">
                 We'd love to hear from you! Let's build something great together.

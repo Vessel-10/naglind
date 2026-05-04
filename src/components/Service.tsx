@@ -19,6 +19,7 @@ interface ServiceData {
 
 export default function Services() {
   // const [selectedService, setSelectedService] = useState<any>(null);
+  // const [selectedService, setSelectedService] = useState<ServiceData | null>(null);
   const [selectedService, setSelectedService] = useState<ServiceData | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -67,7 +68,9 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {Object.keys(servicesData.services).map((key) => {
             if (key === "sectionIntro" || key === "pricingNote") return null;
-            const service = (servicesData.services as any)[key];
+            // const service = (servicesData.services as any)[key];
+            // const service = (servicesData.services as Record<string, ServiceData>)[key];
+            const service = (servicesData.services as Record<string, any>)[key];
 
             return (
               <div 
