@@ -11,12 +11,12 @@ import {
 } from "lucide-react";
 
 const icons = [
-  <ClipboardList size={28} />,
-  <MessageSquare size={28} />,
-  <PenTool size={28} />,
-  <Code2 size={28} />,
-  <CheckCircle2 size={28} />,
-  <Rocket size={28} />
+  <ClipboardList key="clip" size={28} />,
+  <MessageSquare key="msg" size={28} />,
+  <PenTool key="pen" size={28} />,
+  <Code2 key="code" size={28} />,
+  <CheckCircle2 key="check" size={28} />,
+  <Rocket key="rocket" size={28} />
 ];
 
 export default function Process() {
@@ -42,7 +42,7 @@ export default function Process() {
           {/* RIGHT SIDE: DESCRIPTION PARAGRAPH[cite: 9, 10] */}
           <div className="md:w-1/2">
             <p style={{ fontSize: '20px' }} className="text-slate-400 leading-relaxed max-w-xl">
-              Building a website shouldn't be stressful. We've streamlined our process to be simple and transparent, 
+              Building a website shouldn&apos;t be stressful. We've streamlined our process to be simple and transparent, 
               ensuring a smooth path from your initial idea to a live, working website.
             </p>
             <div className="mt-6 inline-flex items-center gap-3 text-[#10B981] font-bold">

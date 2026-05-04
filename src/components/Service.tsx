@@ -3,9 +3,23 @@ import React, { useState } from "react";
 import { ArrowUpRight, Code2, Layout, Smartphone, Search, Palette, Globe, Check } from "lucide-react";
 import Modal from "./Modal";
 import servicesData from "@/data/services.json"; // Path to your JSON file
+interface Tier {
+  name: string;
+  price: string;
+  turnaround: string;
+  whatsIncluded: string[];
+}
+
+interface ServiceData {
+  title: string;
+  intro: string;
+  pricingNote: string;
+  tiers: Tier[];
+}
 
 export default function Services() {
-  const [selectedService, setSelectedService] = useState<any>(null);
+  // const [selectedService, setSelectedService] = useState<any>(null);
+  const [selectedService, setSelectedService] = useState<ServiceData | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Mapping icons to JSON keys
@@ -17,8 +31,13 @@ export default function Services() {
     monthlyMaintenance: <Globe size={28} />,
   };
 
+  // const handleOpenModal = (serviceKey: string) => {
+  //   const data = (servicesData.services as any)[serviceKey];
+  //   setSelectedService(data);
+  //   setIsModalOpen(true);
+  // };
   const handleOpenModal = (serviceKey: string) => {
-    const data = (servicesData.services as any)[serviceKey];
+    const data = (servicesData.services as Record<string, any>)[serviceKey] as ServiceData;
     setSelectedService(data);
     setIsModalOpen(true);
   };

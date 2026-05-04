@@ -13,7 +13,7 @@ const projectTypes = ["Website Build", "Website Redesign", "Custom Dashboard", "
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalTitle, setModalTitle] = useState("Let's Talk");
+  const [modalTitle, setModalTitle] = useState("Let&apos;s Talk");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedType, setSelectedType] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#2F2F2F]">
-      <Navigation onOpenContact={() => openModal("Let's Talk")} />
+      <Navigation onOpenContact={() => openModal("Let&apos;s Talk")} />
       <Hero onStartProject={() => openModal("Start a Project")} />
       
       <Services />

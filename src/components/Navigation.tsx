@@ -41,7 +41,7 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
             onClick={onOpenContact}
             className="bg-[#10B981] text-[#2F2F2F] px-6 py-3 rounded-xl text-[11px] font-black uppercase tracking-widest active:scale-95 transition-all"
           >
-            Let's Talk
+            Let&apos;s Talk
           </button>
         </div>
 
