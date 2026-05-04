@@ -30,7 +30,7 @@ export default function Modal({ isOpen, onClose, title, children }: ModalProps) 
       />
 
       {/* Modal Container with standard Tailwind pop[cite: 8] */}
-      <div className="relative w-full max-w-3xl bg-[#3A3A3A] border border-white/10 rounded-[32px] shadow-2xl flex flex-col max-h-[90vh] overflow-hidden animate-in fade-in zoom-in-95 slide-in-from-bottom-4 duration-300">
+      <div className="relative w-full max-w-5xl bg-[#3A3A3A] border border-white/10 rounded-[32px] shadow-2xl flex flex-col max-h-[90vh] overflow-hidden animate-in fade-in zoom-in-95 slide-in-from-bottom-4 duration-300">
         <div className="flex items-center justify-between p-8 border-b border-white/5">
           <h3 className="text-2xl font-black uppercase tracking-tighter text-[#F0F8FF]">
             {title}

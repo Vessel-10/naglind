@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import Modal from "@/components/Modal";
 import { Send, ChevronDown, Check } from "lucide-react";
 
-const projectTypes = ["Corporate Website", "E-commerce Store", "Web Application", "Portfolio"];
+const projectTypes = ["Website Build", "Website Redesign", "Custom Dashboard", "SEO Optimization", "Monthly Maintenance"];
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -1,0 +1,394 @@
+{
+  "services": {
+    "sectionIntro": "Professional websites built for businesses like yours. We help you stand out online and grow your customer base.",
+    "pricingNote": "💡 Pricing based on scope. Complex projects may vary. Get a custom quote.",
+    
+    "websiteBuild": {
+      "title": "Website Build",
+      "intro": "Get your business found online. Custom websites built for local service businesses. Fast, mobile-first, optimized for Google. Turn website visitors into phone calls.",
+      "pricingNote": "Pricing based on scope. Complex projects may vary. Get a custom quote.",
+      "tiers": [
+        {
+          "name": "Essential",
+          "price": "£600–800",
+          "turnaround": "5–7 days",
+          "pages": "5–8 pages",
+          "technicalFeatures": [
+            "Mobile-first responsive design",
+            "Fast page load times",
+            "Google Business Profile integration",
+            "Local SEO optimization",
+            "Contact form + phone button",
+            "Service photo gallery",
+            "Professional design"
+          ],
+          "whatsIncluded": [
+            "Custom design",
+            "Mobile optimization",
+            "SEO foundation",
+            "Google Analytics",
+            "Contact forms",
+            "Deployment",
+            "5–8 pages"
+          ]
+        },
+        {
+          "name": "Growth",
+          "price": "£1,000–1,500",
+          "turnaround": "7–10 days",
+          "pages": "10–15 pages",
+          "technicalFeatures": [
+            "Everything in Essential PLUS",
+            "Online booking system",
+            "Payment processing (Stripe, PayPal)",
+            "Email automation",
+            "Service catalog with pricing",
+            "Testimonials section",
+            "Email marketing integration"
+          ],
+          "whatsIncluded": [
+            "Everything in Essential",
+            "Booking integrations",
+            "Payment setup",
+            "Email automation",
+            "CMS included",
+            "Blog/news section",
+            "10–15 pages"
+          ]
+        },
+        {
+          "name": "Scale",
+          "price": "£1,800–2,800",
+          "turnaround": "14–21 days",
+          "pages": "15+ pages",
+          "technicalFeatures": [
+            "Everything in Growth PLUS",
+            "Custom dashboard",
+            "User accounts & logins",
+            "Advanced integrations (CRM, inventory)",
+            "Workflow automation",
+            "Multiple user roles",
+            "API access"
+          ],
+          "whatsIncluded": [
+            "Everything in Growth",
+            "Custom dashboard",
+            "User authentication",
+            "Advanced integrations",
+            "Automation workflows",
+            "Training & support",
+            "15+ pages"
+          ]
+        }
+      ]
+    },
+
+    "websiteRedesign": {
+      "title": "Website Redesign",
+      "intro": "Redesigning your website isn't just about looks — it's about results. We modernize your site, improve its speed, and optimize it to convert visitors into customers. Your site becomes a tool that works for you.",
+      "pricingNote": "Pricing based on scope. Complex projects may vary. Get a custom quote.",
+      "tiers": [
+        {
+          "name": "Small",
+          "price": "£1,000–1,500",
+          "turnaround": "5–7 days",
+          "pages": "1–5 pages",
+          "technicalFeatures": [
+            "Modern, responsive redesign",
+            "Speed optimization (30–50% faster)",
+            "Mobile-first layout",
+            "Updated navigation & UX",
+            "Improved SEO structure",
+            "Clean, maintainable code",
+            "Browser compatibility"
+          ],
+          "whatsIncluded": [
+            "New design",
+            "Content migration",
+            "Speed optimization",
+            "SEO improvements",
+            "Testing & QA",
+            "30 days support",
+            "1–5 pages"
+          ]
+        },
+        {
+          "name": "Medium",
+          "price": "£1,600–2,400",
+          "turnaround": "10–14 days",
+          "pages": "6–15 pages",
+          "technicalFeatures": [
+            "Everything in Small PLUS",
+            "Content strategy & rewrite",
+            "Page restructure & reorganization",
+            "New sections added (testimonials, CTA)",
+            "Modern integrations setup",
+            "Advanced SEO optimization",
+            "Analytics & conversion tracking"
+          ],
+          "whatsIncluded": [
+            "Everything in Small",
+            "Content rewrite",
+            "Page restructure",
+            "New sections",
+            "Modern integrations",
+            "Training included",
+            "6–15 pages"
+          ]
+        },
+        {
+          "name": "Large",
+          "price": "£2,800–4,500",
+          "turnaround": "14–21 days",
+          "pages": "15+ pages",
+          "technicalFeatures": [
+            "Everything in Medium PLUS",
+            "Full strategic redesign",
+            "Complete information architecture",
+            "Advanced features & functionality",
+            "Custom integrations (CRM, APIs)",
+            "Database & backend optimization",
+            "Performance monitoring setup"
+          ],
+          "whatsIncluded": [
+            "Everything in Medium",
+            "Full strategy review",
+            "Comprehensive content rewrite",
+            "Custom features built",
+            "Advanced integrations",
+            "Post-launch strategy call",
+            "15+ pages"
+          ]
+        }
+      ]
+    },
+
+    "customDashboard": {
+      "title": "Custom Dashboard",
+      "intro": "See your business at a glance. A custom dashboard brings all your important data together in one, easy-to-use tool. Track metrics that matter, automate workflows, make better decisions faster.",
+      "pricingNote": "Pricing based on scope. Complex projects may vary. Get a custom quote.",
+      "tiers": [
+        {
+          "name": "Simple",
+          "price": "£1,500–2,500",
+          "turnaround": "7–10 days",
+          "complexity": "Basic data tracking & display",
+          "technicalFeatures": [
+            "Secure user authentication",
+            "Data visualization (charts, graphs)",
+            "Real-time or daily data updates",
+            "Basic filtering & search",
+            "Export to CSV/PDF",
+            "Mobile responsive",
+            "Admin panel to manage data"
+          ],
+          "whatsIncluded": [
+            "Custom design",
+            "User authentication",
+            "Basic charts & graphs",
+            "Data export",
+            "Mobile responsive",
+            "Training & docs",
+            "30 days support"
+          ]
+        },
+        {
+          "name": "Intermediate",
+          "price": "£2,500–4,000",
+          "turnaround": "10–14 days",
+          "complexity": "Advanced features & integrations",
+          "technicalFeatures": [
+            "Everything in Simple PLUS",
+            "Advanced analytics & reporting",
+            "Real-time data updates",
+            "Third-party integrations (APIs)",
+            "Custom workflows & automation",
+            "Advanced filtering & sorting",
+            "Email alerts & notifications"
+          ],
+          "whatsIncluded": [
+            "Everything in Simple",
+            "Advanced analytics",
+            "Real-time updates",
+            "API integrations",
+            "Custom workflows",
+            "Email notifications",
+            "Priority support"
+          ]
+        },
+        {
+          "name": "Complex",
+          "price": "£4,000–6,000+",
+          "turnaround": "14–28 days",
+          "complexity": "Highly custom, multi-feature",
+          "technicalFeatures": [
+            "Everything in Intermediate PLUS",
+            "Custom workflows & automation",
+            "Advanced security & permissions",
+            "Multiple user roles & access levels",
+            "Custom data structures",
+            "Advanced integrations (CRM, ERP)",
+            "Automated alerts & triggers"
+          ],
+          "whatsIncluded": [
+            "Everything in Intermediate",
+            "Custom workflows",
+            "Advanced security",
+            "Multiple user roles",
+            "Complex integrations",
+            "Automated alerts",
+            "Ongoing support"
+          ]
+        }
+      ]
+    },
+
+    "seoOptimization": {
+      "title": "SEO Optimization",
+      "intro": "Make your website findable on Google. SEO optimization improves your site's speed, structure, and content so you rank higher for the keywords your customers search for. Results take 2–3 months to show, but the investment pays off in long-term traffic.",
+      "pricingNote": "Pricing based on scope. Complex projects may vary. Get a custom quote.",
+      "tiers": [
+        {
+          "name": "Included with web Builds",
+          "price": "Included",
+          "turnaround": "Built-in",
+          "scope": "All new sites get SEO from day one",
+          "technicalFeatures": [
+            "Fast page speed",
+            "Meta tags & schema",
+            "Mobile optimized",
+            "Google Analytics setup",
+            "SEO foundation",
+            "No extra cost"
+          ],
+          "whatsIncluded": [
+            "Fast page speed",
+            "Meta tags & schema",
+            "Mobile optimized",
+            "Google Analytics setup",
+            "SEO foundation",
+            "No extra cost"
+          ]
+        },
+        {
+          "name": "Audit & Fixes",
+          "price": "£300–600",
+          "turnaround": "3–5 days",
+          "scope": "For existing websites",
+          "technicalFeatures": [
+            "Full technical audit",
+            "Speed optimization",
+            "On-page SEO fixes",
+            "Google Business setup",
+            "Recommendations report",
+            "Implementation support"
+          ],
+          "whatsIncluded": [
+            "Full technical audit",
+            "Speed optimization",
+            "On-page SEO fixes",
+            "Google Business setup",
+            "Recommendations report",
+            "Implementation support"
+          ]
+        },
+        {
+          "name": "Full Optimization",
+          "price": "£600–1,000",
+          "turnaround": "5–10 days",
+          "scope": "Deep strategy & implementation",
+          "technicalFeatures": [
+            "Everything in Audit & Fixes",
+            "Content strategy",
+            "Keyword targeting",
+            "Link analysis",
+            "Monthly reports",
+            "60 days monitoring"
+          ],
+          "whatsIncluded": [
+            "Everything in Audit & Fixes",
+            "Content strategy",
+            "Keyword targeting",
+            "Link analysis",
+            "Monthly reports",
+            "60 days monitoring"
+          ]
+        }
+      ]
+    },
+
+    "monthlyMaintenance": {
+      "title": "Monthly Maintenance",
+      "intro": "Keep your website running smoothly without doing it yourself. Monthly maintenance means security updates, backups, monitoring, and fixes are handled automatically. You focus on your business; I focus on your website.",
+      "pricingNote": "Pricing based on scope. Complex projects may vary. Get a custom quote.",
+      "tiers": [
+        {
+          "name": "Basic",
+          "price": "£150–250/mo",
+          "turnaround": "Ongoing",
+          "focus": "Security & stability",
+          "technicalFeatures": [
+            "Security updates",
+            "Weekly backups",
+            "Uptime monitoring",
+            "Bug fixes (critical)",
+            "Performance report",
+            "Email support"
+          ],
+          "whatsIncluded": [
+            "Security updates",
+            "Weekly backups",
+            "Uptime monitoring",
+            "Bug fixes (critical)",
+            "Performance report",
+            "Email support"
+          ]
+        },
+        {
+          "name": "Standard",
+          "price": "£250–400/mo",
+          "turnaround": "Ongoing",
+          "focus": "Basic + active management",
+          "technicalFeatures": [
+            "Everything in Basic",
+            "Content updates",
+            "Minor features",
+            "Performance optimization",
+            "Monthly check-in",
+            "Priority support"
+          ],
+          "whatsIncluded": [
+            "Everything in Basic",
+            "Content updates",
+            "Minor features",
+            "Performance optimization",
+            "Monthly check-in",
+            "Priority support"
+          ]
+        },
+        {
+          "name": "Premium",
+          "price": "£400–600/mo",
+          "turnaround": "Ongoing",
+          "focus": "Standard + strategic growth",
+          "technicalFeatures": [
+            "Everything in Standard",
+            "Proactive optimization",
+            "Analytics reports",
+            "Quarterly strategy calls",
+            "Feature upgrades",
+            "Phone/Slack support"
+          ],
+          "whatsIncluded": [
+            "Everything in Standard",
+            "Proactive optimization",
+            "Analytics reports",
+            "Quarterly strategy calls",
+            "Feature upgrades",
+            "Phone/Slack support"
+          ]
+        }
+      ]
+    }
+  }
+}

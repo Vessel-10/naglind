@@ -1,96 +1,115 @@
 "use client";
-import React from "react";
-import { ArrowUpRight, Code2, Layout, Smartphone, Search, Palette, Globe } from "lucide-react";
-
-const services = [
-  {
-    title: "Web Designing",
-    desc: "Crafting visually stunning, editorial-grade designs that capture your brand's essence perfectly.",
-    icon: <Palette size={28} />,
-  },
-  {
-    title: "Web Development",
-    desc: "Building fast, responsive, and scalable web applications using modern technologies like Next.js.",
-    icon: <Code2 size={28} />,
-  },
-  {
-    title: "Web Application",
-    desc: "Developing complex, high-performance web systems tailored to your specific business needs.",
-    icon: <Layout size={28} />,
-  },
-  {
-    title: "Mobile Solutions",
-    desc: "Creating seamless mobile experiences that keep your users engaged on every device.",
-    icon: <Smartphone size={28} />,
-  },
-  {
-    title: "SEO Optimization",
-    desc: "Boosting your online visibility and ensuring your target audience finds you effortlessly.",
-    icon: <Search size={28} />,
-  },
-  {
-    title: "Digital Branding",
-    desc: "Defining your digital identity with consistent and professional design languages.",
-    icon: <Globe size={28} />,
-  },
-];
+import React, { useState } from "react";
+import { ArrowUpRight, Code2, Layout, Smartphone, Search, Palette, Globe, Check } from "lucide-react";
+import Modal from "./Modal";
+import servicesData from "@/data/services.json"; // Path to your JSON file
 
 export default function Services() {
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Mapping icons to JSON keys
+  const iconMap: { [key: string]: React.ReactNode } = {
+    websiteBuild: <Layout size={28} />,
+    websiteRedesign: <Palette size={28} />,
+    customDashboard: <Code2 size={28} />,
+    seoOptimization: <Search size={28} />,
+    monthlyMaintenance: <Globe size={28} />,
+  };
+
+  const handleOpenModal = (serviceKey: string) => {
+    const data = (servicesData.services as any)[serviceKey];
+    setSelectedService(data);
+    setIsModalOpen(true);
+  };
+
   return (
     <section id="services" className="py-32 bg-[#2F2F2F] overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         
-        {/* RESTRUCTURED HEADER: SPLIT LEFT & RIGHT */}
+        {/* HEADER SECTION[cite: 9] */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-14">
-          
-          {/* LEFT SIDE: BADGE & TITLE */}
           <div className="md:w-1/2">
             <div className="inline-block bg-[#10B981]/10 border border-[#10B981]/20 px-6 py-2 rounded-full mb-6">
-              <p style={{ fontSize: '15px' }} className="text-[#10B981] font-bold tracking-wide uppercase">
-                What we offer
-              </p>
+              <p className="text-[15px] text-[#10B981] font-bold tracking-wide uppercase">What we offer</p>
             </div>
-            <h2 style={{ fontSize: '52px' }} className="font-black text-[#F0F8FF] tracking-tighter uppercase leading-[1.1]">
+            <h2 className="text-[52px] font-black text-[#F0F8FF] tracking-tighter uppercase leading-[1.1]">
               Expert Services<span className="text-[#10B981]">.</span>
             </h2>
           </div>
-
-          {/* RIGHT SIDE: DESCRIPTION PARAGRAPH */}
           <div className="md:w-1/2">
-            <p style={{ fontSize: '20px' }} className="text-slate-400 leading-relaxed max-w-xl">
-              We combine technical excellence with premium design to help your business stand out in a crowded digital landscape.
+            <p className="text-[20px] text-slate-400 leading-relaxed max-w-xl">
+              {servicesData.services.sectionIntro} {/* */}
             </p>
           </div>
         </div>
 
         {/* SERVICES GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className="group relative p-10 rounded-[40px] bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-[#10B981]/40 transition-all duration-500 shadow-2xl hover:-translate-y-2"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-[#10B981] mb-8 group-hover:bg-[#10B981] group-hover:text-[#2F2F2F] transition-all duration-300">
-                {service.icon}
-              </div>
+          {Object.keys(servicesData.services).map((key) => {
+            if (key === "sectionIntro" || key === "pricingNote") return null;
+            const service = (servicesData.services as any)[key];
 
-              <h3 style={{ fontSize: '24px' }} className="font-bold text-[#F0F8FF] mb-4 tracking-tight">
-                {service.title}
-              </h3>
-              <p style={{ fontSize: '17px' }} className="text-slate-400 leading-relaxed mb-10">
-                {service.desc}
-              </p>
+            return (
+              <div 
+                key={key}
+                onClick={() => handleOpenModal(key)}
+                className="group relative p-10 rounded-[40px] bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-[#10B981]/40 transition-all duration-500 shadow-2xl hover:-translate-y-2 cursor-pointer"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-[#10B981] mb-8 group-hover:bg-[#10B981] group-hover:text-[#2F2F2F] transition-all duration-300">
+                  {iconMap[key] || <Smartphone size={28} />}
+                </div>
 
-              <div className="flex items-center gap-3 text-[#10B981] font-bold uppercase text-xs tracking-[0.2em] group/link cursor-pointer">
-                <span className="group-hover:mr-2 transition-all duration-300">Read More</span>
-                <ArrowUpRight size={18} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                <h3 className="text-[24px] font-bold text-[#F0F8FF] mb-4 tracking-tight">{service.title}</h3>
+                <p className="text-[17px] text-slate-400 leading-relaxed mb-10 line-clamp-3">{service.intro}</p>
+
+                <div className="flex items-center gap-3 text-[#10B981] font-bold uppercase text-xs tracking-[0.2em]">
+                  <span>View Tiers</span>
+                  <ArrowUpRight size={18} />
+                </div>
               </div>
-              
-              <div className="absolute inset-0 rounded-[40px] bg-[#10B981]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
+
+      {/* SERVICE TIERS MODAL[cite: 6, 11] */}
+      <Modal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        title={selectedService?.title || "Service Details"}
+      >
+        <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <p className="text-slate-300 text-lg leading-relaxed">{selectedService?.intro}</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {selectedService?.tiers.map((tier: any, idx: number) => (
+              <div key={idx} className="bg-white/5 border border-white/10 p-6 rounded-3xl flex flex-col hover:border-[#10B981]/30 transition-colors">
+                <span className="text-[#10B981] text-[12px] font-black uppercase tracking-[0.2em] mb-2">{tier.name}</span>
+                <h4 className="text-2xl font-black text-white mb-1">{tier.price}</h4>
+                <p className="text-xs text-slate-500 mb-6 uppercase font-bold tracking-tighter">Turnaround: {tier.turnaround}</p>
+                
+                <div className="space-y-3 mb-8 flex-grow">
+                  {tier.whatsIncluded.map((item: string, i: number) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <Check size={14} className="text-[#10B981] mt-1 flex-shrink-0" />
+                      <span className="text-sm text-slate-300 leading-tight">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <button className="w-full bg-white/5 hover:bg-[#10B981] text-white hover:text-[#2F2F2F] py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all">
+                  Select Plan
+                </button>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-xs text-slate-500 font-bold italic">
+            {selectedService?.pricingNote}
+          </p>
+        </div>
+      </Modal>
     </section>
   );
 }
