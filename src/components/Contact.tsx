@@ -3,11 +3,11 @@ import React, { useState, useRef, useEffect } from "react";
 import { Mail, Phone, MapPin, ChevronDown, Send, Check } from "lucide-react";
 
 const services = [
-  "Web Development",
-  "UI/UX Design",
+  "Website Build",
+  "Website Redesign",
+  "Custom Dashboard",
   "SEO Optimization",
-  "Branding & Identity",
-  "Mobile App Solutions"
+  "Monthly Maintenance"
 ];
 
 export default function Contact() {
