@@ -9,7 +9,8 @@ interface HeroProps {
 export default function Hero({ onStartProject }: HeroProps) {
     return (
         <section className="relative h-auto lg:h-screen min-h-[650px] bg-[#2F2F2F] pt-28 pb-12 lg:py-0 flex items-center overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center pt-16 lg:pt-24">
+                
                 <div className="lg:col-span-7 space-y-6 lg:space-y-8 z-10">
                     <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-8 py-2 rounded-full">
                         <div className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
@@ -32,7 +33,6 @@ export default function Hero({ onStartProject }: HeroProps) {
                     </div>
                 </div>
 
-                {/* Bento Grid Visuals[cite: 5] */}
                 <div className="lg:col-span-5 grid grid-cols-2 gap-4 relative w-full">
                     <div className="col-span-2 bg-white/[0.03] border border-white/10 rounded-[32px] p-8 backdrop-blur-md flex flex-col items-center text-center">
                         <Timer className="text-[#10B981] mb-4" size={68} />
@@ -51,4 +51,4 @@ export default function Hero({ onStartProject }: HeroProps) {
             </div>
         </section>
     );
-}
+}   

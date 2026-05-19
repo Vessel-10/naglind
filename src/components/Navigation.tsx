@@ -24,13 +24,11 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
         isScrolled ? "bg-[#2F2F2F]/90 backdrop-blur-md border-white/10 shadow-2xl" : "bg-transparent border-transparent"
       }`}>
         
-        {/* LOGO */}
-        <div className="flex items-center tracking-tighter">
+        <a href="#" className="flex items-center tracking-tighter hover:opacity-90 transition-opacity">
           <span className="text-2xl font-[900] text-[#F0F8FF] uppercase">NAGL</span>
           <span className="text-2xl font-[900] text-[#10B981] uppercase">IND</span>
-        </div>
+        </a>
 
-        {/* DESKTOP NAV (Visible on Large Screens) */}
         <div className="hidden lg:flex items-center gap-10">
           {links.map((link) => (
             <a key={link} href={`#${link.toLowerCase()}`} className="text-[11px] font-bold text-white/70 uppercase tracking-[0.2em] hover:text-[#10B981] transition-colors">
@@ -45,7 +43,6 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
           </button>
         </div>
 
-        {/* MOBILE & TABLET TOGGLE (Visible on everything smaller than LG) */}
         <div className="flex items-center gap-4 lg:hidden">
           <button 
             onClick={onOpenContact}
@@ -62,7 +59,6 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
         </div>
       </div>
 
-      {/* MOBILE/TABLET DROPDOWN MENU */}
       {mobileMenuOpen && (
         <div className="absolute top-28 left-4 right-4 bg-[#3A3A3A] border border-white/10 p-8 rounded-3xl flex flex-col gap-6 lg:hidden shadow-2xl animate-in fade-in slide-in-from-top-4 duration-300 z-[150]">
           {links.map((link) => (
