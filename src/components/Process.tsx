@@ -126,12 +126,20 @@ export default function Process() {
               ))}
             </div>
 
-            <div className="flex justify-center md:justify-start">
+            {/* <div className="flex justify-center md:justify-start">
               <button 
                 className="bg-[#10B981] text-[#2F2F2F] px-10 py-5 rounded-2xl font-black uppercase tracking-widest transition-all hover:scale-[1.03] active:scale-95 shadow-2xl shadow-[#10B981]/20"
               >
                 Start a Project
               </button>
+            </div> */}
+            <div className="flex justify-center md:justify-start">
+              <a 
+                href="#contact"
+                className="inline-block bg-[#10B981] text-[#2F2F2F] px-10 py-5 rounded-2xl font-black uppercase tracking-widest transition-all hover:scale-[1.03] active:scale-95 shadow-2xl shadow-[#10B981]/20 text-center"
+              >
+                Start a Project
+              </a>
             </div>
           </div>
         </div>
